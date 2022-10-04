@@ -1,0 +1,63 @@
+{% extends 'layout.html' %} {% block content %}
+
+<div class="card text-center">
+  <div class="card-header">
+    <ul class="nav nav-tabs card-header-tabs">
+      <!-- <li class="nav-item">
+        <a
+          class="nav-link active"
+          href="{{ url_for('english.Persion_Full_Subtitle_Web') }}"
+          >Persion Meaning</a
+        >Static_Persion_Subtitle
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link active" href="{{ url_for('english.Static_Persion_Subtitle') }}">Persion Meaning</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('english.English_Words_Web') }}">Words</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('english.Full_Subtitle_Web') }}"
+          >Full Subtitle</a
+        >
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url_for('english.Static_English_Subtitle') }}">Full Subtitle</a>
+      </li>
+    </ul>
+  </div>
+  <a href="{{ url_for('english.Movie_Review_Web') }}" class="btn btn-primary btn-lg">Movie Review</a>
+  <a href="{{ url_for('english.Continuation_Web') }}" class="btn btn-secondary btn-lg">Continuation Of The Movie
+    Story</a>
+  <div class="content-section py-3 bg-info">
+    <form>
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last name" hidden />
+        </div>
+
+        <div class="col m-2">
+          <input type="email" class="form-control" placeholder="example@demo.com" name="email" required />
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Last name" hidden />
+        </div>
+      </div>
+      <button class="btn btn-primary btn-sm" type="submit">Send</button>
+    </form>
+  </div>
+  
+  <div class="alert alert-info">Please Select Your Options There Above</div>
+  {% block section %} {% endblock section %}
+  <div class="content-section">
+    <small class="text-muted">
+      There Is About 110 Hard Words To Know About !
+    </small>
+  </div>
+</div>
+<div class="content-section p-5">
+  <small class="text-muted">
+    Returning back to home page ? <a href="{{ url_for('base.Home') }}" class="btn btn-primary btn-sm">Home Page</a>
+  </small>
+</div>
+{% endblock content %}
