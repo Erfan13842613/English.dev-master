@@ -20,6 +20,7 @@ def Full_Subtitle_Web():
     return render_template('EnglishTemplate/Full_Subtitle_Web.html', text=text, flash=flash)
 
 
+
 @english.route('/words')
 @english.route('/home/words')
 def English_Words_Web():
